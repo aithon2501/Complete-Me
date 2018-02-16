@@ -15,8 +15,8 @@ describe('Node', () => {
     expect(node.children).to.deep.equal({});
   });
 
-  it('should start with no complete words', () => {
-    expect(node.completeWord).to.equal(0);
+  it('should start with the property of completeWord at false', () => {
+    expect(node.completeWord).to.equal(false);
   })
 
   it('should start with a priority of zero', () => {

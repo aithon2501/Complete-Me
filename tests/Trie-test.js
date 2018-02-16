@@ -44,7 +44,7 @@ describe('Trie', () => {
 
       expect(trie.children['p'].children['i'].children['z']).to.exist;
       expect(trie.children['p'].children['i'].children['a']).to.exist;
-      expect(trie.children['d'].children['o'].children['g'].completeWord).to.equal(1);
+      expect(trie.children['d'].children['o'].children['g'].completeWord).to.equal(true);
     })
 
     it('should create keys in children object of first letter', () => {
@@ -118,14 +118,6 @@ describe('Trie', () => {
       expect(trie.wordCount).to.equal(0);
       trie.populate(array);
       expect(trie.wordCount).to.equal(3);
-    })
-
-    it('should ONLY insert an array of words', () => {
-      let array = 'this is my piano, cat, dog';
-
-      expect(trie.wordCount).to.equal(0);
-      trie.populate(array);
-      expect(trie.wordCount).to.equal(0);
     })
 
     it('should populate a dictionary of words', () => {
