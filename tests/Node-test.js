@@ -18,4 +18,8 @@ describe('Node', () => {
   it('should start with no complete words', () => {
     expect(node.completeWord).to.equal(0);
   })
+
+  it('should start with a priority of zero', () => {
+    expect(node.priority).to.equal(0)
+  })
 })
